@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=1)
 
     parser.add_argument('--embedding', choices=['bert', 'bow'], default='bert')
-    parser.add_argument('--dataset', choices=['citeulike-a', 'citeulike-t'], default='citeulike-a')
+    parser.add_argument('--dataset', choices=['amazon-pantry','citeulike-a', 'citeulike-t'], default='citeulike-a')
     parser.add_argument('--recall', type=int, default=300)
     parser.add_argument('--out', default='model.pt')
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     # SDAE hyperparameters
     parser.add_argument('--lr', type=float, default=1e-3)
-    parser.add_argument('--batch_size', type=int, default=128)
+    parser.add_argument('--batch_size', type=int, default=4) #it was 128 
     parser.add_argument('--dropout', type=float, default=0.1)
     parser.add_argument('--corruption', type=float, default=0.3)
     parser.add_argument('--activation', choices=sdae_activations.keys(), default='sigmoid')

@@ -14,8 +14,8 @@ def transform_file(dataset, filename_base, shape):
             for item_id in item_ids:
                 indices[0].append(i)
                 indices[1].append(int(item_id))
-
     values = [1] * len(indices[0])
+    print(len(values),shape,len(indices[0]),len(indices[1]))
     x = torch.sparse_coo_tensor(indices, values, shape, dtype=torch.float32)
 
     base, _ = os.path.splitext(filename_base)
@@ -28,6 +28,7 @@ if __name__ == '__main__':
     shape = {
         'citeulike-a': (5551, 16980),
         'citeulike-t': (7947, 25975),
+        'amazon-pantry': (216628, 10812),
     }
 
     for a in ['train', 'test']:
