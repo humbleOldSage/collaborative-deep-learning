@@ -43,11 +43,7 @@ if __name__ == '__main__':
 
     # SDAE hyperparameters
     parser.add_argument('--lr', type=float, default=1e-3)
-<<<<<<< HEAD
-    parser.add_argument('--batch_size', type=int, default=16) #it was 128 
-=======
-    parser.add_argument('--batch_size', type=int, default=8) #it was 128 
->>>>>>> f337046c1d0837984772b124d814fa45692a3f69
+    parser.add_argument('--batch_size', type=int, default=128) #it was 128 
     parser.add_argument('--dropout', type=float, default=0.1)
     parser.add_argument('--corruption', type=float, default=0.3)
     parser.add_argument('--activation', choices=sdae_activations.keys(), default='sigmoid')
