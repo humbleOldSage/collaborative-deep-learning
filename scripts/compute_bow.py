@@ -31,5 +31,7 @@ if __name__ == '__main__':
     shape = {
         'citeulike-a': (16980, 8000),
         'citeulike-t': (25975, 20000),
+        'amazon-pantry': (10812,15000),
+
     }
     compute_bow(f'data/raw/{dataset_name}/mult.dat', f'data/processed/{dataset_name}/content-bow.pt', shape[dataset_name])

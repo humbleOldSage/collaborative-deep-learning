@@ -6,7 +6,7 @@ infer:
 
 citeulike-a: mkdir-citeulike-a bow-citeulike-a relationships-citeulike-a bert-citeulike-a
 citeulike-t: mkdir-citeulike-t bow-citeulike-t relationships-citeulike-t bert-citeulike-t
-amazon-pantry: mkdir-amazon-pantry relationships-amazon-pantry bert-amazon-pantry
+amazon-pantry: mkdir-amazon-pantry bow-amazon-pantry relationships-amazon-pantry bert-amazon-pantry
 
 clean:
 	rm -rf data/processed
@@ -35,6 +35,9 @@ bow-citeulike-a:
 
 bow-citeulike-t:
 	python scripts/compute_bow.py citeulike-t
+
+bow-amazon-pantry:
+	python scripts/compute_bow.py amazon-pantry
 
 relationships-citeulike-a:
 	python scripts/compute_relationships.py citeulike-a
